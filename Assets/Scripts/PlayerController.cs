@@ -38,13 +38,6 @@ public class PlayerController : MonoBehaviour
 
     private void Flip(float direction)
     {
-        if(direction > 0)
-        {
-            _spriteRenderer.flipX = false;
-        }
-        else if(direction < 0)
-        {
-            _spriteRenderer.flipX = true;
-        }
+        _spriteRenderer.flipX = direction < 0;
     }
 }
